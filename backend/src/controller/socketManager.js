@@ -8,9 +8,8 @@ let timeOnline = {}
 const connectToSocket= (server)=>{
     const io = new Server(server,{
         cors:{
-            origin:"http://localhost:5173",
-            methods:["get","post"],
-            allowedHeaders:["*"],
+            origin:"https://video-conferencing-app-1-vljk.onrender.com",
+            methods:["GET","POST"],
             credentials:true
         }
     });
