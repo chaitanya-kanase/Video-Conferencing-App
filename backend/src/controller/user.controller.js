@@ -28,19 +28,9 @@ const login = async (req,res)=>{
             return res.status(401).json({message:"Incorrect password"});
         }
 
-        const token = jwt.sign(
-            {
-                username:user.username
-            },
-            "MySecreteKey",
-            {
-                expiresIn:"7d"
-            }
-        );
 
         res.status(200).json({
             message:"Login Successful",
-            token,
             user:{
                 name:user.name,
                 username:user.username
